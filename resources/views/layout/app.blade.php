@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>LMS SKAGU</title>
+    <title>LMS SMK Negeri 1 Grujugan</title>
 
     <!-- Fontfaces CSS-->
     <link href="{{ asset('temp/css/font-face.css') }}" rel="stylesheet" media="all">
