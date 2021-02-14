@@ -17,3 +17,5 @@ Route::get('/', function () {
     return view('s_home');
 });
 Route::view('/tugas','s_tugas');
+Route::view('/materi','s_materi');
+Route::view('/absen','s_absen');

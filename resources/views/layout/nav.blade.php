@@ -1,23 +1,23 @@
             
                 <li class="active has-sub">
                     <a class="js-arrow" href="/">
-                        <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                        <i class="fas fa-tachometer-alt"></i>Beranda</a>
                 </li>
                 <li>
-                    <a href="">
-                        <i class="fas fa-chart-bar"></i>Materi</a>
+                    <a href="/absen">
+                        <i class="fas fa-calendar-alt"></i>Absen</a>
                 </li>
                 <li>
-                    <a href="">
-                        <i class="fas fa-table"></i>Absen</a>
+                    <a href="/materi">
+                        <i class="fas fa-book"></i>Materi</a>
                 </li>
                 <li>
                     <a href="/tugas">
                         <i class="far fa-check-square"></i>Tugas</a>
                 </li>
                 <li>
-                    <a href="calendar.html">
-                        <i class="fas fa-calendar-alt"></i>Calendar</a>
+                    <a href="/ulangan">
+                        <i class="fas fa-pen-square"></i>Ulangan</a>
                 </li>
                 <li>
                     <a href="map.html">

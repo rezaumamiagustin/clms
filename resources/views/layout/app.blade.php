@@ -42,8 +42,10 @@
             <div class="header-mobile__bar">
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
-                        <a class="logo" href="index.html">
-                            <img src="{{ asset('temp/images/icon/logo.png') }}" alt="CoolAdmin" />
+                        <a class="logo" href="/">
+                            <h1>
+                            <img src="{{ asset('temp/images/icon/logosekolah.png') }}" alt="SKAGU" />
+                            SKAGU</h1>
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -66,8 +68,10 @@
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
-                <a href="#">
-                    <img src="{{ asset('temp/images/icon/logo.png') }}" alt="Cool Admin" />
+                <a href="/">
+                    <h1>
+                        <img src="{{ asset('temp/images/icon/logosekolah.png') }}"alt="SKAGU" />
+                        SKAGU</h1>
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
@@ -94,7 +98,7 @@
                             </form>
                             <div class="header-button">
                                 <div class="noti-wrap">
-                                    <div class="noti__item js-item-menu">
+                                    {{-- <div class="noti__item js-item-menu">
                                         <i class="zmdi zmdi-comment-more"></i>
                                         <span class="quantity">1</span>
                                         <div class="mess-dropdown js-dropdown">
@@ -164,7 +168,7 @@
                                                 <a href="#">See all emails</a>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <div class="noti__item js-item-menu">
                                         <i class="zmdi zmdi-notifications"></i>
                                         <span class="quantity">3</span>
