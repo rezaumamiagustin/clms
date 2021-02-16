@@ -1,6 +1,6 @@
 @extends('layout.app')
-@section('title', 'Materi')
-
+@section('title', 'Ulangan')
+    
 @section('content')
 <br>
 <div class="row">
@@ -11,7 +11,7 @@
                     Matematika
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">BAB 1</h5>
+                    <h5 class="card-title">Ulangan Bab 1</h5>
                     <p class="card-text">nama guru</p>
                 </div>
             </a>
@@ -24,7 +24,7 @@
                     Bahasa Indonesia
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">BAB 1</h5>
+                    <h5 class="card-title">Ulangan Bab 1</h5>
                     <p class="card-text">nama guru</p>
                 </div>
             </a>
@@ -37,7 +37,7 @@
                     Bahasa Inggris
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">BAB 1</h5>
+                    <h5 class="card-title">Ulangan Bab 1</h5>
                     <p class="card-text">nama guru</p>
                 </div>
             </a>

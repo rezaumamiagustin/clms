@@ -20,8 +20,8 @@
                         <i class="fas fa-pen-square"></i>Ulangan</a>
                 </li>
                 <li>
-                    <a href="map.html">
-                        <i class="fas fa-map-marker-alt"></i>Maps</a>
+                    <a href="/nilai">
+                        <i class="fas fa-calculator"></i>Nilai</a>
                 </li>
                 {{-- <li class="has-sub">
                     <a class="js-arrow" href="#">

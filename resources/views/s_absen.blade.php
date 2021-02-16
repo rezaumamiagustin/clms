@@ -1,5 +1,33 @@
 @extends('layout.app')
 @section('title', 'Absen')
 @section('content')
-    <h1>ini siswa Absen</h1>
+<br>
+    <h3>Daftar Hadir Bulan Januari</h3>
+    <div class="entry-content-page">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>2/16/2021</td>
+                        <td>Hadir</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>2/17/2021</td>
+                        <td>Hadir</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 @endsection

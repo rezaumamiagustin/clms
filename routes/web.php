@@ -19,3 +19,6 @@ Route::get('/', function () {
 Route::view('/tugas','s_tugas');
 Route::view('/materi','s_materi');
 Route::view('/absen','s_absen');
+Route::view('/nilai','s_nilai');
+Route::view('/ulangan','s_ulangan');
+Route::view('/ulangan','s_ulangan');

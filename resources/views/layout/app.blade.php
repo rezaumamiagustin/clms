@@ -45,7 +45,7 @@
                         <a class="logo" href="/">
                             <h1>
                             <img src="{{ asset('temp/images/icon/logosekolah.png') }}" alt="SKAGU" />
-                            SKAGU</h1>
+                            LESGO</h1>
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -71,7 +71,7 @@
                 <a href="/">
                     <h1>
                         <img src="{{ asset('temp/images/icon/logosekolah.png') }}"alt="SKAGU" />
-                        SKAGU</h1>
+                        LESGO</h1>
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
