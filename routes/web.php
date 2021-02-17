@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +22,8 @@ Route::view('/materi','s_materi');
 Route::view('/absen','s_absen');
 Route::view('/nilai','s_nilai');
 Route::view('/ulangan','s_ulangan');
-Route::view('/ulangan','s_ulangan');
+
+Auth::routes();
+
+Route::get('admin/home', [App\Http\Controllers\HomeController::class, 'index'])->name('admin.home')->middleware('is_admin');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'adminHome'])->name('home');
