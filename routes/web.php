@@ -25,5 +25,6 @@ Route::view('/ulangan','s_ulangan');
 
 Auth::routes();
 
-Route::get('admin/home', [App\Http\Controllers\HomeController::class, 'index'])->name('admin.home')->middleware('is_admin');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'adminHome'])->name('home');
+Route::get('admin/home', [App\Http\Controllers\HomeController::class, 'admin'])->name('admin.home')->middleware('is_admin');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'user'])->name('home');
+Route::get('guru/home', [App\Http\Controllers\HomeController::class, 'guru'])->name('guru.home');

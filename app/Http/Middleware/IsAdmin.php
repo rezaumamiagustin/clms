@@ -14,9 +14,12 @@ class IsAdmin
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle(Request $request, Closure $next)
+    // awalnya public function handle(Request $request, Closure $next)
+    // {
+    //    if(auth()->user()->is_admin == 1){
+    public function handle(Request $request, Closure $next, ...$levels)
     {
-        if(auth()->user()->is_admin == 1){
+        if(in_array($request->user()->is_admin,$levels)){
             return $next($request);
         }
         return redirect('home')->with('error', "Anda Tidak Dapat Mengakses Halaman Ini!!");

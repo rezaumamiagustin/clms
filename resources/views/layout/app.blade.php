@@ -211,19 +211,19 @@
                                 </div>
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
-                                        <div class="image">
+                                        {{-- <div class="image">
                                             <img src="{{ asset('temp/images/icon/avatar-01.jpg') }}" alt="John Doe" />
-                                        </div>
+                                        </div> --}}
                                         <div class="content">
                                             <a class="js-acc-btn" href="#">john doe</a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
-                                                <div class="image">
+                                                {{-- <div class="image">
                                                     <a href="#">
                                                         <img src="{{ asset('temp/images/icon/avatar-01.jpg') }}" alt="John Doe" />
                                                     </a>
-                                                </div>
+                                                </div> --}}
                                                 <div class="content">
                                                     <h5 class="name">
                                                         <a href="#">john doe</a>
@@ -231,7 +231,7 @@
                                                     <span class="email">johndoe@example.com</span>
                                                 </div>
                                             </div>
-                                            <div class="account-dropdown__body">
+                                            {{-- <div class="account-dropdown__body">
                                                 <div class="account-dropdown__item">
                                                     <a href="#">
                                                         <i class="zmdi zmdi-account"></i>Account</a>
@@ -244,10 +244,17 @@
                                                     <a href="#">
                                                         <i class="zmdi zmdi-money-box"></i>Billing</a>
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                             <div class="account-dropdown__footer">
-                                                <a href="#">
-                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                                @auth
+                                                    <form method="POST" action="{{ route('logout') }}">
+                                                    @csrf
+                                                        <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                        this.closest('form').submit();" >
+                                                        <i class="zmdi zmdi-power"></i>Logout</a>
+                                                    @else
+                                                    <a href="/login"><i class="zmdi zmdi-power"></i>Login</a>
+                                                @endauth
                                             </div>
                                         </div>
                                     </div>
