@@ -1,28 +1,50 @@
-            
-                <li class="active has-sub">
-                    <a class="js-arrow" href="/">
-                        <i class="fas fa-tachometer-alt"></i>Beranda</a>
-                </li>
-                <li>
-                    <a href="/absen">
-                        <i class="fas fa-calendar-alt"></i>Absen</a>
-                </li>
-                <li>
-                    <a href="/materi">
-                        <i class="fas fa-book"></i>Materi</a>
-                </li>
-                <li>
-                    <a href="/tugas">
-                        <i class="far fa-check-square"></i>Tugas</a>
-                </li>
-                <li>
-                    <a href="/ulangan">
-                        <i class="fas fa-pen-square"></i>Ulangan</a>
-                </li>
-                <li>
-                    <a href="/nilai">
-                        <i class="fas fa-calculator"></i>Nilai</a>
-                </li>
+@if(auth()->check() && auth()->user()->is_admin == 1)  
+    <li class="active has-sub">
+        <a class="js-arrow" href="/">
+            <i class="fas fa-home"></i>Beranda</a>
+    </li>
+    <li>
+        <a href="/a_siswa">
+            <i class="fas fa-user"></i></i>CRUD Siswa</a>
+    </li>
+    <li>
+        <a href="/a_guru">
+        <i class="fas fa-user"></i>CRUD Guru</a>
+    </li>
+    <li>
+        <a href="/a_mapel">
+        <i class="fas fa-book"></i>CRUD Mapel</a>
+    </li>
+    <li>
+        <a href="/a_tugas">
+        <i class="fas fa-book"></i>CRUD Kelas</a>
+    </li>
+@else         
+    <li class="active has-sub">
+        <a class="js-arrow" href="/">
+        <i class="fas fa-tachometer-alt"></i>Beranda</a>
+    </li>
+    <li>
+        <a href="/absen">
+        <i class="fas fa-calendar-alt"></i>Absen</a>
+    </li>
+    <li>
+        <a href="/materi">
+        <i class="fas fa-book"></i>Materi</a>
+    </li>
+    <li>
+        <a href="/tugas">
+        <i class="far fa-check-square"></i>Tugas</a>
+    </li>
+    <li>
+        <a href="/ulangan">
+        <i class="fas fa-pen-square"></i>Ulangan</a>
+    </li>
+    <li>
+        <a href="/nilai">
+        <i class="fas fa-calculator"></i>Nilai</a>
+    </li>
+@endif
                 {{-- <li class="has-sub">
                     <a class="js-arrow" href="#">
                         <i class="fas fa-copy"></i>Pages</a>

@@ -2,6 +2,9 @@
 @section('title', 'Absen')
 @section('content')
 <br>
+@if(auth()->check() && auth()->user()->is_admin == 2)
+    <h1>ini absen GURU</h1>
+@else 
     <h3>Daftar Hadir Bulan Januari</h3>
     <div class="entry-content-page">
         <div class="table-responsive">
@@ -30,4 +33,6 @@
             </table>
         </div>
     </div>
+@endif
+    
 @endsection

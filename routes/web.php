@@ -15,13 +15,19 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('s_home');
+    return view('auth/login');
 });
 Route::view('/tugas','s_tugas');
 Route::view('/materi','s_materi');
 Route::view('/absen','s_absen');
 Route::view('/nilai','s_nilai');
 Route::view('/ulangan','s_ulangan');
+
+// admin
+Route::view('/a_siswa','a_siswa');
+Route::view('/a_guru','a_guru');
+Route::view('/a_mapel','a_mapel');
+Route::view('/a_kelas','a_kelas');
 
 Auth::routes();
 

@@ -3,6 +3,9 @@
     
 @section('content')
 <br>
+@if(auth()->check() && auth()->user()->is_admin == 2)
+    <h1>ini halaman absen GURU</h1>
+@else
 <div class="row">
 	<div class="col-sm-4">
         <div class="card text-center">
@@ -53,4 +56,5 @@
         </div>
     </div>
 </div>
+@endif
 @endsection
