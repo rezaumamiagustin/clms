@@ -17,7 +17,7 @@ class CreatePresensisTable extends Migration
             $table->id();
             $table->bigInteger('user_id');
             $table->date("tgl");
-            $table->enum('keterangan',['Masuk','Izin','Sakit']);
+            $table->string('keterangan');
             $table->time('jammasuk')->nullable();
             $table->time('jamkeluar')->nullable();
             $table->time('jumlahjam')->nullable();

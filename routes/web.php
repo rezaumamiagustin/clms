@@ -18,6 +18,7 @@ use App\Http\Controllers\PresensiSiswaController;
 Route::get('/', function () {
     return view('auth/login');
 });
+Route::view('/s_home','s_home');
 Route::view('/tugas','s_tugas');
 Route::view('/materi','s_materi');
 // Route::view('/absen','s_absen');

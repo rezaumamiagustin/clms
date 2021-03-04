@@ -1,6 +1,6 @@
 @if(auth()->check() && auth()->user()->is_admin == 1)  
     <li class="active has-sub">
-        <a class="js-arrow" href="/">
+        <a class="js-arrow" href="/s_home">
             <i class="fas fa-home"></i>Beranda</a>
     </li>
     <li>
@@ -21,7 +21,7 @@
     </li>
 @elseif(auth()->check() && auth()->user()->is_admin == 2)
     <li class="active has-sub">
-        <a class="js-arrow" href="/">
+        <a class="js-arrow" href="/s_home">
         <i class="fas fa-tachometer-alt"></i>Beranda</a>
     </li>
     <li class="has-sub">
@@ -29,7 +29,7 @@
         <i class="fas fa-calendar-alt"></i>Absen</a>
         <ul class="list-unstyled navbar__sub-list js-sub-list">
             <li>
-                <a href="/">Laporan Absensi</a>
+                <a href="/s_home">Laporan Absensi</a>
             </li>
         </ul>
     </li>
@@ -51,7 +51,7 @@
     </li>
 @else         
     <li class="active has-sub">
-        <a class="js-arrow" href="/">
+        <a class="js-arrow" href="/s_home">
         <i class="fas fa-tachometer-alt"></i>Beranda</a>
     </li>
     <li class="has-sub">
