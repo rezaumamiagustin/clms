@@ -209,13 +209,16 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="account-wrap">
+                                    {{-- @foreach ($user as $data) --}}
                                     <div class="account-item clearfix js-item-menu">
-                                        {{-- <div class="image">
-                                            <img src="{{ asset('temp/images/icon/avatar-01.jpg') }}" alt="John Doe" />
-                                        </div> --}}
+                                        <div class="image">
+                                            {{-- <img src="{{ asset('temp/images/icon/avatar-01.jpg') }}" alt="John Doe" /> --}}
+                                            <p>Hello, {{ Auth::user()->name }}</p>
+                                        </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">john doe</a>
+                                            <a class="js-acc-btn" href="#"></a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
@@ -226,9 +229,9 @@
                                                 </div> --}}
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="#">john doe</a>
+                                                        <a href="#">{{ Auth::user()->name }}</a>
                                                     </h5>
-                                                    <span class="email">johndoe@example.com</span>
+                                                    <span class="email">{{ Auth::user()->email }}</span>
                                                 </div>
                                             </div>
                                             {{-- <div class="account-dropdown__body">
@@ -258,6 +261,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    {{-- @endforeach --}}
                                 </div>
                             </div>
                         </div>
