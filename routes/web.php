@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\PresensiSiswaController;
+use App\Http\Controllers\TugasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +20,11 @@ Route::get('/', function () {
     return view('auth/login');
 });
 Route::view('/s_home','s_home');
-Route::view('/tugas','s_tugas');
+//tugas
+Route::get('s_tugas/{tugas}', [TugasController::class, 'lihat']);
+Route::get('/s_tugas', [TugasController::class, 'tambah']);
+Route::post('/s_tugas', [TugasController::class, 'simpan']);
+
 Route::view('/materi','s_materi');
 // Route::view('/absen','s_absen');
 Route::view('/nilai','s_nilai');
@@ -30,11 +35,6 @@ Route::view('/Admin/a_siswa','Admin/a_siswa');
 Route::view('/Admin/a_guru','Admin/a_guru');
 Route::view('/Admin/a_mapel','Admin/a_mapel');
 Route::view('/Admin/a_kelas','Admin/a_kelas');
-
-//presensi guru
-// Route::group(['middleware' => ['auth','ceklevel:karyawan']], function () {
-//     Route::get('/SiswaPresensi/absenMasuk', [App\Http\Controllers\SiswaAbsenController::class, 'user'])->name('presensi-masuk');
-// }
 
 
 Auth::routes();
@@ -50,5 +50,12 @@ Route::group(['middleware' => ['auth','is_admin:0']], function () {
     route::get('/presensi-keluar',[PresensiSiswaController::class,'absenKeluar'])->name('presensi-keluar'); 
     route::get('/ubah-presensi',[PresensiSiswaController::class,'keluar'])->name('ubah-presensi');  
 });
-// Route::post('/simpan-masuk',[PresensiSiswaController::class,'store']);
-// Route::get('/presensi-masuk', [PresensiSiswaController::class, 'index']);
+
+// tugas
+// Route::group(['middleware' => ['auth','is_admin:0']], function () {
+//     Route::get('s_tugas/{tugas}', [TugasController::class, 'lihat']);
+// });
+// Route::group(['middleware' => ['auth','is_admin:2']], function () {
+//     Route::get('/s_tugas', [TugasController::class, 'tambah']);
+//     Route::post('s_tugas', [TugasController::class, 'simpan']);
+// });

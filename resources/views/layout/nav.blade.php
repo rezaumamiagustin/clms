@@ -38,7 +38,7 @@
         <i class="fas fa-book"></i>Materi</a>
     </li>
     <li>
-        <a href="/tugas">
+        <a href="{{ url('/s_tugas') }}">
         <i class="far fa-check-square"></i>Tugas</a>
     </li>
     <li>
@@ -71,7 +71,7 @@
         <i class="fas fa-book"></i>Materi</a>
     </li>
     <li>
-        <a href="/tugas">
+        <a href="{{ url('/s_tugas') }}">
         <i class="far fa-check-square"></i>Tugas</a>
     </li>
     <li>

@@ -6,6 +6,7 @@ use DateTime;
 use DateTimeZone;
 use App\Models\Presensi;
 use Illuminate\Http\Request;
+use League\CommonMark\Inline\Parser\BacktickParser;
 
 class PresensiSiswaController extends Controller
 {
@@ -70,7 +71,7 @@ class PresensiSiswaController extends Controller
                 'jammasuk' => $localtime,
             ]);
         }
-        return redirect('presensi-masuk')->with('status', 'Terima kasih sudah mengisi presensi');
+        return back();
     }
 
     public function keluar()
