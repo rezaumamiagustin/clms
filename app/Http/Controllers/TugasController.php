@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class TugasController extends Controller
 {
-    public function tambah(Tugas $tugas){
+    public function create(Tugas $tugas){
         return view('s_tugas', ['tugas' => $tugas]);  
     } 
 
@@ -38,10 +38,10 @@ class TugasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+    // public function create()
+    // {
+    //     //
+    // }
 
     /**
      * Store a newly created resource in storage.
@@ -51,7 +51,16 @@ class TugasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'nama_tugas' => 'required',
+            'end_date' => 'required'
+        ]);
+        Tugas::create([
+            'nama_tugas' => $request->nama_tugas,
+            'end_date' => $request->end_date
+        ]);
+
+        return redirect('/s_tugas')->with('status', 'Data berhasil diTambah');
     }
 
     /**

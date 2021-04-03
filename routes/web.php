@@ -22,7 +22,8 @@ Route::get('/', function () {
 Route::view('/s_home','s_home');
 //tugas
 Route::get('s_tugas/{tugas}', [TugasController::class, 'lihat']);
-Route::get('/s_tugas', [TugasController::class, 'tambah']);
+Route::get('/s_tugas', [TugasController::class, 'create']);
+Route::post('/s_tugas', [TugasController::class, 'store']);
 Route::post('/s_tugas', [TugasController::class, 'simpan']);
 
 Route::view('/materi','s_materi');
